@@ -8,7 +8,7 @@ export const siteConfig = {
   behavior: {
     // Navbar controls
     navbar: {
-      autoHide: true,
+      autoHide: false,
       showProgressBar: true,
       // Used by smooth anchor scrolling to offset for sticky header height
       smoothScrollOffset: 80,
