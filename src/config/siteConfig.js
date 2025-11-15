@@ -14,12 +14,12 @@ export const siteConfig = {
       smoothScrollOffset: 80,
     },
     // Enable/disable CSS scroll snap for sections
-    snapScrolling: false,
+    snapScrolling: true,
     // Performance tuning
     performance: {
-      particlesDesktop: 36,
-      particlesMobile: 14,
-      baseStars: 80,
+      particlesDesktop: 28,
+      particlesMobile: 10,
+      baseStars: 60,
       reduceOnMobile: true,
     },
   },
