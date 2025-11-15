@@ -35,3 +35,29 @@
   --bg: #f8fafc;
   --fg: #0E0B16;
 }
+
+/* --- Extra Cosmic Animations --- */
+/* Twinkling tiny stars */
+.twinkle-layer { position:absolute; inset:0; overflow:hidden; pointer-events:none; }
+.star-dot { position:absolute; width:2px; height:2px; background:#fff; border-radius:9999px; opacity:0.1; animation: twinkle 3s ease-in-out infinite; box-shadow:0 0 8px rgba(255,255,255,0.3); }
+@keyframes twinkle { 0%,100% { opacity:0.15; transform: scale(1); } 50% { opacity:0.8; transform: scale(1.6); } }
+
+/* Shooting stars */
+.shooting-star { position:absolute; width:120px; height:2px; background: linear-gradient(90deg, rgba(255,255,255,0.9), rgba(0,229,255,0.0)); filter: drop-shadow(0 0 6px rgba(0,229,255,0.6)); border-radius:2px; opacity:0; }
+@keyframes shoot {
+  0% { transform: translate3d(0,0,0) rotate(-20deg); opacity:0; }
+  5% { opacity:1; }
+  100% { transform: translate3d(120vw, -40vh, 0) rotate(-20deg); opacity:0; }
+}
+
+/* Aurora ribbon */
+.aurora { position:absolute; inset-x-0 top-0 height:60%; pointer-events:none; background: radial-gradient(120% 60% at 50% 0%, rgba(0,229,255,0.20), rgba(0,229,255,0.0) 60%), radial-gradient(80% 50% at 20% 10%, rgba(48,25,52,0.35), rgba(48,25,52,0) 60%), radial-gradient(90% 60% at 80% 5%, rgba(11,110,79,0.28), rgba(11,110,79,0) 60%); mix-blend-mode: screen; animation: drift 18s ease-in-out infinite alternate; }
+@keyframes drift { 0% { transform: translateY(0) translateX(-2%) skewY(-1deg); filter: blur(14px); } 100% { transform: translateY(6%) translateX(2%) skewY(1deg); filter: blur(18px); } }
+
+/* Floating orbs */
+.orb { position:absolute; border-radius:9999px; filter: blur(24px); opacity:0.35; }
+@keyframes floaty { 0% { transform: translateY(0px) translateX(0px); } 50% { transform: translateY(-20px) translateX(10px); } 100% { transform: translateY(0px) translateX(0px); } }
+
+/* Slow orbiting glow around title */
+.ring-glow { position:absolute; width:420px; height:420px; border-radius:50%; border:1px solid rgba(0,229,255,0.15); box-shadow:0 0 80px rgba(0,229,255,0.25) inset; animation: orbit 30s linear infinite; }
+@keyframes orbit { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }

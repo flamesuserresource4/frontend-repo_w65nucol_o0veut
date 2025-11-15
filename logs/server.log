@@ -3,7 +3,66 @@
 > vite
 
 
-  VITE v5.4.20  ready in 420 ms
+  VITE v5.4.20  ready in 261 ms
 
   ➜  Local:   http://localhost:3000/
   ➜  Network: http://172.20.36.161:3000/
+11:30:39 PM [vite] Pre-transform error: [postcss] /home/workspace/src/index.css:54:40: Unknown word top-0
+11:30:40 PM [vite] Pre-transform error: [postcss] /home/workspace/src/index.css:54:40: Unknown word top-0
+11:30:40 PM [vite] Internal server error: [postcss] /home/workspace/src/index.css:54:40: Unknown word top-0
+  Plugin: vite:css
+  File: /home/workspace/src/index.css:54:39
+  52 |  
+  53 |  /* Aurora ribbon */
+  54 |  .aurora { position:absolute; inset-x-0 top-0 height:60%; pointer-events:none; background: radial-gradient(120% 60% at 50% 0%, rgba(0,229,255,0.20), rgba(0,229,255,0.0) 60%), radial-gradient(80% 50% at 20% 10%, rgba(48,25,52,0.35), rgba(48,25,52,0) 60%), radial-gradient(90% 60% at 80% 5%, rgba(11,110,79,0.28), rgba(11,110,79,0) 60%); mix-blend-mode: screen; animation: drift 18s ease-in-out infinite alternate; }
+     |                                         ^
+  55 |  @keyframes drift { 0% { transform: translateY(0) translateX(-2%) skewY(-1deg); filter: blur(14px); } 100% { transform: translateY(6%) translateX(2%) skewY(1deg); filter: blur(18px); } }
+  56 |  
+      at Input.error (/home/workspace/node_modules/postcss/lib/input.js:135:16)
+      at Parser.unknownWord (/home/workspace/node_modules/postcss/lib/parser.js:595:22)
+      at Parser.decl (/home/workspace/node_modules/postcss/lib/parser.js:236:16)
+      at Parser.other (/home/workspace/node_modules/postcss/lib/parser.js:401:18)
+      at Parser.parse (/home/workspace/node_modules/postcss/lib/parser.js:472:16)
+      at parse (/home/workspace/node_modules/postcss/lib/parse.js:11:12)
+      at new LazyResult (/home/workspace/node_modules/postcss/lib/lazy-result.js:165:16)
+      at Processor.process (/home/workspace/node_modules/postcss/lib/processor.js:53:14)
+      at compileCSS (file:///home/workspace/node_modules/vite/dist/node/chunks/dep-D_zLpgQd.js:36898:59)
+      at async TransformPluginContext.transform (file:///home/workspace/node_modules/vite/dist/node/chunks/dep-D_zLpgQd.js:36171:11)
+11:30:41 PM [vite] Internal server error: [postcss] /home/workspace/src/index.css:54:40: Unknown word top-0
+  Plugin: vite:css
+  File: /home/workspace/src/index.css:54:39
+  52 |  
+  53 |  /* Aurora ribbon */
+  54 |  .aurora { position:absolute; inset-x-0 top-0 height:60%; pointer-events:none; background: radial-gradient(120% 60% at 50% 0%, rgba(0,229,255,0.20), rgba(0,229,255,0.0) 60%), radial-gradient(80% 50% at 20% 10%, rgba(48,25,52,0.35), rgba(48,25,52,0) 60%), radial-gradient(90% 60% at 80% 5%, rgba(11,110,79,0.28), rgba(11,110,79,0) 60%); mix-blend-mode: screen; animation: drift 18s ease-in-out infinite alternate; }
+     |                                         ^
+  55 |  @keyframes drift { 0% { transform: translateY(0) translateX(-2%) skewY(-1deg); filter: blur(14px); } 100% { transform: translateY(6%) translateX(2%) skewY(1deg); filter: blur(18px); } }
+  56 |  
+      at Input.error (/home/workspace/node_modules/postcss/lib/input.js:135:16)
+      at Parser.unknownWord (/home/workspace/node_modules/postcss/lib/parser.js:595:22)
+      at Parser.decl (/home/workspace/node_modules/postcss/lib/parser.js:236:16)
+      at Parser.other (/home/workspace/node_modules/postcss/lib/parser.js:401:18)
+      at Parser.parse (/home/workspace/node_modules/postcss/lib/parser.js:472:16)
+      at parse (/home/workspace/node_modules/postcss/lib/parse.js:11:12)
+      at new LazyResult (/home/workspace/node_modules/postcss/lib/lazy-result.js:165:16)
+      at Processor.process (/home/workspace/node_modules/postcss/lib/processor.js:53:14)
+      at compileCSS (file:///home/workspace/node_modules/vite/dist/node/chunks/dep-D_zLpgQd.js:36898:59)
+      at async TransformPluginContext.transform (file:///home/workspace/node_modules/vite/dist/node/chunks/dep-D_zLpgQd.js:36171:11)
+11:31:09 PM [vite] Internal server error: [postcss] /home/workspace/src/index.css:54:40: Unknown word top-0
+  Plugin: vite:css
+  File: /home/workspace/src/index.css:54:39
+  52 |  
+  53 |  /* Aurora ribbon */
+  54 |  .aurora { position:absolute; inset-x-0 top-0 height:60%; pointer-events:none; background: radial-gradient(120% 60% at 50% 0%, rgba(0,229,255,0.20), rgba(0,229,255,0.0) 60%), radial-gradient(80% 50% at 20% 10%, rgba(48,25,52,0.35), rgba(48,25,52,0) 60%), radial-gradient(90% 60% at 80% 5%, rgba(11,110,79,0.28), rgba(11,110,79,0) 60%); mix-blend-mode: screen; animation: drift 18s ease-in-out infinite alternate; }
+     |                                         ^
+  55 |  @keyframes drift { 0% { transform: translateY(0) translateX(-2%) skewY(-1deg); filter: blur(14px); } 100% { transform: translateY(6%) translateX(2%) skewY(1deg); filter: blur(18px); } }
+  56 |  
+      at Input.error (/home/workspace/node_modules/postcss/lib/input.js:135:16)
+      at Parser.unknownWord (/home/workspace/node_modules/postcss/lib/parser.js:595:22)
+      at Parser.decl (/home/workspace/node_modules/postcss/lib/parser.js:236:16)
+      at Parser.other (/home/workspace/node_modules/postcss/lib/parser.js:401:18)
+      at Parser.parse (/home/workspace/node_modules/postcss/lib/parser.js:472:16)
+      at parse (/home/workspace/node_modules/postcss/lib/parse.js:11:12)
+      at new LazyResult (/home/workspace/node_modules/postcss/lib/lazy-result.js:165:16)
+      at Processor.process (/home/workspace/node_modules/postcss/lib/processor.js:53:14)
+      at compileCSS (file:///home/workspace/node_modules/vite/dist/node/chunks/dep-D_zLpgQd.js:36898:59)
+      at async TransformPluginContext.transform (file:///home/workspace/node_modules/vite/dist/node/chunks/dep-D_zLpgQd.js:36171:11)
