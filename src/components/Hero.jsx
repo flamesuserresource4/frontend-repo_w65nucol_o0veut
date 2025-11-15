@@ -1,6 +1,7 @@
 import Spline from '@splinetool/react-spline';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { useMemo, useRef, useEffect, useState } from 'react';
+import { siteConfig } from '../config/siteConfig';
 
 export default function Hero() {
   const containerRef = useRef(null);
@@ -62,9 +63,9 @@ export default function Hero() {
   }, [tinyStars]);
 
   return (
-    <section id="top" ref={containerRef} className="relative min-h-[90vh] w-full overflow-hidden">
+    <section id="top" ref={containerRef} className="relative min-h-[90vh] w-full overflow-hidden" aria-label="Hero">
       {/* Spline scene base */}
-      <div className="absolute inset-0">
+      <div className="absolute inset-0" aria-hidden>
         <Spline scene="https://prod.spline.design/7m4PRZ7kg6K1jPfF/scene.splinecode" style={{ width: '100%', height: '100%' }} />
       </div>
 
@@ -101,7 +102,7 @@ export default function Hero() {
       </div>
 
       {/* Gradient veil to ensure text contrast */}
-      <div className="absolute inset-0 bg-gradient-to-b from-[#0E0B16]/60 via-[#0E0B16]/65 to-[#0E0B16] pointer-events-none" />
+      <div className="absolute inset-0 bg-gradient-to-b from-[#0E0B16]/60 via-[#0E0B16]/65 to-[#0E0B16] pointer-events-none" aria-hidden />
 
       {/* Title ring glow behind text */}
       <div className="pointer-events-none absolute left-1/2 -translate-x-1/2 top-40 hidden sm:block" aria-hidden>
@@ -122,7 +123,7 @@ export default function Hero() {
           transition={{ duration: 0.8 }}
           className="font-orbitron text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white drop-shadow-[0_0_20px_rgba(0,229,255,0.35)]"
         >
-          Nilesh Chavan – Full-Stack Developer & Aspiring Software Architect
+          {siteConfig.brand.name}
         </motion.h1>
         <motion.p
           initial={{ opacity: 0, y: 20 }}
@@ -130,7 +131,15 @@ export default function Hero() {
           transition={{ duration: 1, delay: 0.2 }}
           className="mt-5 text-cyan-200/90 text-base sm:text-lg tracking-wide"
         >
-          Cosmic • Gaming • Technology
+          Full-Stack Developer • Debugging Expert • Aspiring Software Architect
+        </motion.p>
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 0.28 }}
+          className="mt-1 text-cyan-300/90 text-sm uppercase tracking-[0.25em]"
+        >
+          {siteConfig.brand.tagline}
         </motion.p>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -139,14 +148,15 @@ export default function Hero() {
           className="mt-8 flex items-center gap-4 relative group"
         >
           <a href="#projects" className="px-6 py-3 rounded-xl bg-[#00E5FF] text-[#0E0B16] font-semibold uppercase tracking-wide shadow-[0_0_25px_#00E5FF] hover:shadow-[0_0_45px_#00E5FF] transition-shadow">
-            View Projects
+            View My Work
           </a>
-          <a href="#contact" className="px-6 py-3 rounded-xl border border-cyan-300/50 text-cyan-200 hover:bg-white/10 transition-colors">
-            Contact
+          <a href="/resume.pdf" className="px-6 py-3 rounded-xl border border-cyan-300/50 text-cyan-200 hover:bg-white/10 transition-colors">
+            Download Resume (PDF)
           </a>
           {/* Hover comet */}
           <span className="comet pointer-events-none" aria-hidden />
         </motion.div>
+        <p className="mt-3 text-xs text-cyan-200/70">Prefer dark mode — toggle in header</p>
       </div>
     </section>
   );

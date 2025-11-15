@@ -1,0 +1,7 @@
+<svg width="800" height="600" viewBox="0 0 800 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="800" height="600" rx="24" fill="#0E0B16"/>
+<circle cx="200" cy="220" r="140" fill="#301934"/>
+<circle cx="580" cy="220" r="100" fill="#0B6E4F"/>
+<circle cx="380" cy="420" r="160" fill="#00E5FF" fill-opacity="0.2"/>
+<text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="#9D4EDD" font-size="24" font-family="Inter, Arial" letter-spacing="2">Hero Placeholder</text>
+</svg>

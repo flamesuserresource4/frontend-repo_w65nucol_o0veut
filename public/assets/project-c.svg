@@ -1,0 +1,8 @@
+<svg width="800" height="500" viewBox="0 0 800 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="800" height="500" rx="24" fill="#0E0B16"/>
+<rect x="80" y="80" width="640" height="340" rx="16" fill="#0c1426" stroke="#0B6E4F" stroke-width="3"/>
+<circle cx="140" cy="140" r="8" fill="#00E5FF"/>
+<circle cx="170" cy="140" r="8" fill="#0B6E4F"/>
+<circle cx="200" cy="140" r="8" fill="#9D4EDD"/>
+<text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="#0B6E4F" font-size="20" font-family="Inter, Arial">Project C Placeholder</text>
+</svg>

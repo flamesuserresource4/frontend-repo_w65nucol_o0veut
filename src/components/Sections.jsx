@@ -1,4 +1,4 @@
-import { Code2, Orbit, Rocket, Gamepad2, Cpu, Server, Boxes, Bug, Sparkles, Download, Github, Linkedin, Mail, Phone, Instagram } from 'lucide-react';
+import { Code2, Orbit, Rocket, Gamepad2, Cpu, Server, Boxes, Bug, Sparkles, Download, Github, Linkedin, Mail, Phone, Instagram, ChevronDown } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 const fadeUp = {
@@ -35,44 +35,19 @@ export function About() {
       <motion.div variants={stagger} className="grid md:grid-cols-2 gap-8 items-start">
         <motion.div variants={fadeUp} className="space-y-6">
           <p className="text-cyan-100/90 leading-relaxed">
-            I am Nilesh Chavan, a full‑stack developer who loves where nature and technology meet. Gaming sharpens my reflexes; debugging is my superpower. I’m charting a path toward software architecture, designing resilient, scalable systems that feel elegant and alive.
+            I build complex features, design micro-frontend systems, and move toward software architecture and AI/ML. I balance nature and tech — a gamer and cosmic thinker.
+          </p>
+          <p className="text-cyan-100/90 leading-relaxed">
+            Loves: Black Holes, Nebulae, DOTA (Mid), Trekking, Nature, Solar-powered tech home.
           </p>
           <div className="rounded-2xl p-6 bg-white/5 border border-white/10 shadow-xl">
-            <h3 className="text-cyan-200 font-semibold mb-3">Professional Experience</h3>
-            <ul className="space-y-4 text-cyan-100/85">
-              <li>
-                <div className="font-medium text-white">Senior Software Developer / Project Manager — Osian Infotech Pvt Ltd</div>
-                <div className="text-xs text-cyan-200/70">Sep 2019 – Present</div>
-                <ul className="list-disc ml-5 mt-2 space-y-1 text-sm">
-                  <li>Led React micro‑frontend modules and Node.js services for 4 concurrent projects.</li>
-                  <li>Built JavaScript SDK adopted by 3 teams; cut integration effort by 30%.</li>
-                  <li>Implemented Docker Bitbucket pipelines reducing deploy time from 2 days to 2 hours.</li>
-                  <li>Facilitated Jira‑led agile ceremonies achieving 95% sprint velocity.</li>
-                  <li>Designed Java REST APIs for legacy integration.</li>
-                </ul>
-              </li>
-              <li>
-                <div className="font-medium text-white">Jr. Software Developer — Tekno Point</div>
-                <div className="text-xs text-cyan-200/70">Oct 2017 – Dec 2018</div>
-                <ul className="list-disc ml-5 mt-2 space-y-1 text-sm">
-                  <li>Developed AEM components and templates for marketing sites.</li>
-                  <li>Created PDF generation workflow with iText.</li>
-                </ul>
-              </li>
-            </ul>
-          </div>
-          <div className="rounded-2xl p-6 bg-white/5 border border-white/10 shadow-xl">
-            <h3 className="text-cyan-200 font-semibold mb-3">Domain Experience</h3>
-            <div className="flex flex-wrap gap-2 text-sm">
-              {['IoT dashboards','Offline game analytics','MIS custom dashboards','Finance web apps','Banking modules','Insurance automation'].map((d) => (
-                <span key={d} className="px-3 py-1 rounded-full bg-white/10 border border-white/10 text-cyan-100/90">{d}</span>
-              ))}
-            </div>
+            <h3 className="text-cyan-200 font-semibold mb-3">Strength</h3>
+            <p className="text-cyan-100/90 flex items-start gap-2"><Bug size={18} className="mt-0.5"/> Deep debugging, performance tuning, and clean, composable architecture.</p>
           </div>
         </motion.div>
         <motion.div variants={fadeUp} className="rounded-2xl p-6 bg-gradient-to-br from-[#301934]/50 to-[#0B6E4F]/30 border border-white/10 shadow-xl">
-          <div className="flex items-center gap-3 text-cyan-200 mb-2"><Bug size={18} /><span className="uppercase tracking-widest text-xs">Strength</span></div>
-          <p className="text-cyan-100/90">Deep debugging, performance tuning, and clean, composable architecture.</p>
+          <img src="/assets/hero-placeholder.svg" alt="Nilesh portrait placeholder" className="w-full rounded-xl border border-white/10" loading="lazy" />
+          <div className="mt-4 text-xs text-cyan-200/80">Alt text and captions help everyone. All media has alt where applicable.</div>
         </motion.div>
       </motion.div>
     </Section>
@@ -102,38 +77,38 @@ export function CosmicIdentity() {
 
 export function Skills() {
   const card = 'rounded-2xl p-6 bg-gradient-to-br from-[#301934]/40 to-[#0E0B16]/60 border border-white/10 hover:border-cyan-300/40 transition-colors shadow-xl';
-  const pill = 'inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 border border-white/10 text-cyan-100/90 shadow';
+  const pill = 'inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 border border-white/10 text-cyan-100/90 shadow focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400';
   return (
-    <Section id="skills" title="Skills & Technology">
+    <Section id="skills" title="Tech Nebula — My Stack">
       <motion.div variants={stagger} className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
         <motion.div variants={fadeUp} className={card}>
-          <h3 className="text-cyan-200 mb-3 font-semibold flex items-center gap-2"><Code2 size={18}/> Front‑end</h3>
+          <h3 className="text-cyan-200 mb-3 font-semibold flex items-center gap-2"><Code2 size={18}/> Frontend</h3>
           <div className="flex flex-wrap gap-2">
-            {['JavaScript','TypeScript','HTML5','CSS3','React','Redux','Next.js','Tailwind','Bootstrap','Material-UI','Webpack','Babel','SASS/SCSS','CSS Modules','Responsive Design','UI/UX','Accessibility','Cross-browser Testing'].map((s)=> (
+            {['JavaScript','React','Next.js','Tailwind'].map((s)=> (
               <span key={s} className={pill}>{s}</span>
             ))}
           </div>
         </motion.div>
         <motion.div variants={fadeUp} className={card}>
-          <h3 className="text-cyan-200 mb-3 font-semibold flex items-center gap-2"><Server size={18}/> Back‑end & APIs</h3>
+          <h3 className="text-cyan-200 mb-3 font-semibold flex items-center gap-2"><Server size={18}/> Backend</h3>
           <div className="flex flex-wrap gap-2">
-            {['Node.js','Express','REST APIs','Java','SQL','PHP','Python'].map((s)=> (
+            {['Node.js','Express','microservices'].map((s)=> (
               <span key={s} className={pill}>{s}</span>
             ))}
           </div>
         </motion.div>
         <motion.div variants={fadeUp} className={card}>
-          <h3 className="text-cyan-200 mb-3 font-semibold flex items-center gap-2"><Boxes size={18}/> Patterns</h3>
+          <h3 className="text-cyan-200 mb-3 font-semibold flex items-center gap-2"><Boxes size={18}/> Architecture</h3>
           <div className="flex flex-wrap gap-2">
-            {['SPA','PWA','Micro-frontends'].map((s)=> (
+            {['micro-frontends','system design'].map((s)=> (
               <span key={s} className={pill}>{s}</span>
             ))}
           </div>
         </motion.div>
         <motion.div variants={fadeUp} className={card}>
-          <h3 className="text-cyan-200 mb-3 font-semibold flex items-center gap-2"><Cpu size={18}/> DevOps & Tools</h3>
+          <h3 className="text-cyan-200 mb-3 font-semibold flex items-center gap-2"><Cpu size={18}/> Tools</h3>
           <div className="flex flex-wrap gap-2">
-            {['Git','GitHub','Bitbucket','Docker','CI/CD','Jira','VS Code','Adobe AEM','Jest','Storybook','React Testing Library'].map((s)=> (
+            {['Docker','CI/CD','Git', 'AI/ML (roadmap)'].map((s)=> (
               <span key={s} className={pill}>{s}</span>
             ))}
           </div>
@@ -143,56 +118,49 @@ export function Skills() {
   );
 }
 
-export function Projects() {
-  const proj = (title, summary, stack, role, href) => (
-    <motion.div variants={fadeUp} className="rounded-2xl p-6 bg-white/5 border border-white/10 hover:border-cyan-300/40 transition-colors shadow-xl">
-      <h3 className="text-xl font-semibold text-white drop-shadow-[0_0_12px_rgba(0,229,255,0.25)]">{title}</h3>
-      <p className="text-cyan-100/85 mt-2">{summary}</p>
-      <div className="mt-4 text-cyan-200/90 text-sm">Stack: {stack}</div>
-      <div className="mt-1 text-cyan-200/70 text-sm">Role: {role}</div>
-      {href && (
-        <a href={href} target="_blank" rel="noreferrer" className="mt-4 inline-flex items-center gap-2 text-[#00E5FF] hover:text-white">
-          <Rocket size={16}/> View Project
-        </a>
-      )}
-    </motion.div>
-  );
+function ProjectCard({ title, summary, meta, img }){
   return (
-    <Section id="projects" title="Projects">
+    <motion.details variants={fadeUp} className="group rounded-2xl overflow-hidden bg-white/5 border border-white/10 hover:border-cyan-300/40 transition-colors shadow-xl">
+      <summary className="cursor-pointer list-none p-0 focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400">
+        <div className="p-6 flex items-start gap-4">
+          <img src={img} alt="Project preview placeholder" className="w-20 h-20 rounded-lg object-cover border border-white/10" loading="lazy" />
+          <div>
+            <h3 className="text-xl font-semibold text-white drop-shadow-[0_0_12px_rgba(0,229,255,0.25)]">{title}</h3>
+            <p className="text-cyan-100/85 mt-2">{summary}</p>
+            <div className="mt-3 text-cyan-200/90 text-sm">{meta}</div>
+          </div>
+          <ChevronDown className="ml-auto text-cyan-300 group-open:rotate-180 transition-transform" />
+        </div>
+      </summary>
+      <div className="px-6 pb-6 text-cyan-100/85">
+        <p>More details coming soon. This card expands to show highlights, links, and screenshots.</p>
+      </div>
+    </motion.details>
+  );
+}
+
+export function Projects() {
+  return (
+    <Section id="projects" title="Projects (Galaxy)">
       <motion.div variants={stagger} className="grid md:grid-cols-2 gap-6">
-        {proj(
-          'Modular Galaxy – Micro‑Frontend Architecture',
-          'A constellation of independently deployable UI modules stitched via federated routing and shared design tokens for continuous delivery at scale.',
-          'React, Module Federation, Nx, CI/CD',
-          'Lead developer & solution designer'
-        )}
-        {proj(
-          'Flutter Color Nebula – VS Code Extension',
-          'A lightweight extension that previews dynamic Flutter color palettes inline. 470k+ installs with a 4.5★ rating; accelerated theme iteration for designers and devs.',
-          'TypeScript, VS Code API',
-          'Author',
-          'https://marketplace.visualstudio.com/items?itemName=circlecodesolution.ccs-flutter-color'
-        )}
-        {proj(
-          'Gaia Sensors – Nature Tech Dashboard',
-          'Real‑time sensors meet eco‑visualizations with alerts that feel like auroras.',
-          'Next.js, WebSockets, Tailwind',
-          'Full‑stack developer'
-        )}
-        {proj(
-          'Count Code Of Line – VS Code Extension',
-          'Counts lines of code across your workspace with quick insights. 1.5k+ installs.',
-          'TypeScript, VS Code API',
-          'Author',
-          'https://marketplace.visualstudio.com/items?itemName=BuzzyEvent.count-code-of-line'
-        )}
-        {proj(
-          'Redirect to WP Post – Chrome Extension',
-          'One‑click shortcut to navigate straight to WordPress post editing.',
-          'JavaScript, Chrome Extensions',
-          'Author',
-          'https://chromewebstore.google.com/detail/redirectto-wp-post/hdincebafepapncdmmhdlmcdbnokdlai'
-        )}
+        <ProjectCard
+          title="Modular Galaxy — Micro-Frontend Architecture"
+          summary="Designed & implemented a micro-frontend system for multiple product teams; reduced deployment friction and improved modularity."
+          meta="Stack: React, Module Federation, Node.js"
+          img="/assets/project-a.svg"
+        />
+        <ProjectCard
+          title="Flutter Color Nebula — VS Code Extension"
+          summary="VS Code extension with 470k installs; improved developer UX for Flutter color editing."
+          meta="Metrics: downloads, rating"
+          img="/assets/project-b.svg"
+        />
+        <ProjectCard
+          title="IoT Constellation — Real-time Dashboards"
+          summary="Real-time dashboards, analytics, and notification system."
+          meta="Stack: Next.js, WebSockets, Tailwind"
+          img="/assets/project-c.svg"
+        />
       </motion.div>
     </Section>
   );
@@ -200,14 +168,15 @@ export function Projects() {
 
 export function GamingMindset() {
   return (
-    <Section id="gaming" title="Gaming Mindset">
-      <motion.div variants={fadeUp} className="rounded-2xl p-6 bg-gradient-to-r from-[#0B6E4F]/30 to-[#301934]/40 border border-white/10 shadow-xl flex flex-col sm:flex-row items-center gap-6">
-        <div className="w-full sm:w-auto">
-          <div className="aspect-[16/9] w-full sm:w-72 rounded-xl bg-[url('https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=1200&auto=format&fit=crop')] bg-cover bg-center border border-white/10" />
-        </div>
-        <div>
-          <h3 className="text-white text-xl font-semibold flex items-center gap-2"><Gamepad2 size={18}/> DOTA Mid Player</h3>
-          <p className="text-cyan-100/85 mt-2 max-w-2xl">Mid‑lane decision‑making sharpens pattern recognition, timing, and map awareness — the same instincts I apply to architecture, debugging, and delivery under pressure.</p>
+    <Section id="gaming" title="Gaming (Star Cluster)">
+      <motion.div variants={fadeUp} className="rounded-2xl p-6 bg-gradient-to-r from-[#0B6E4F]/30 to-[#301934]/40 border border-white/10 shadow-xl">
+        <h3 className="text-white text-xl font-semibold flex items-center gap-2"><Gamepad2 size={18}/> DOTA Mid — strategic, calm under pressure.</h3>
+        <p className="text-cyan-100/85 mt-2 max-w-3xl">Gaming sharpens my product thinking and system decisions.</p>
+        <div className="mt-4 grid grid-cols-2 sm:grid-cols-4 gap-3 text-xs text-cyan-200/80">
+          <div className="rounded-lg bg-white/5 border border-white/10 p-3">Timing</div>
+          <div className="rounded-lg bg-white/5 border border-white/10 p-3">Map Awareness</div>
+          <div className="rounded-lg bg-white/5 border border-white/10 p-3">Strategy</div>
+          <div className="rounded-lg bg-white/5 border border-white/10 p-3">Calm Decisions</div>
         </div>
       </motion.div>
     </Section>
@@ -216,10 +185,11 @@ export function GamingMindset() {
 
 export function Vision() {
   return (
-    <Section id="vision" title="Vision & Life Philosophy">
+    <Section id="vision" title="Vision / Life Philosophy (Aurora / Planet)">
       <motion.div variants={fadeUp} className="rounded-2xl p-6 bg-white/5 border border-white/10 shadow-xl">
+        <h3 className="text-cyan-200 font-semibold mb-3">Build for Peace — Nature & Technology</h3>
         <p className="text-cyan-100/90 leading-relaxed">
-          I build for peace, nature & technology. Big land. Solar‑powered tech home. Animals. Nature ecosystem. Night‑sky watching. Software that serves the planet and people.
+          I aim to become a Senior Software Architect and master AI/ML. One day I’ll build a solar-powered nature home with a tech lab — a personal ecosystem under the stars.
         </p>
       </motion.div>
     </Section>
@@ -228,34 +198,39 @@ export function Vision() {
 
 export function Contact() {
   return (
-    <Section id="contact" title="Contact">
+    <Section id="contact" title="Contact (Deep Space)">
       <motion.div variants={stagger} className="grid md:grid-cols-2 gap-6">
         <motion.div variants={fadeUp} className="rounded-2xl p-6 bg-white/5 border border-white/10 shadow-xl">
-          <div className="flex items-center gap-3 text-cyan-200 mb-2"><Mail size={18} /> <span>Email</span></div>
-          <a className="text-cyan-100 hover:text-white" href="mailto:nileshchavan0608@gmail.com">nileshchavan0608@gmail.com</a>
+          <p className="text-white font-medium">Hire / Collaborate / Say Hi</p>
+          <div className="mt-4 grid grid-cols-2 gap-4 text-sm">
+            <a className="inline-flex items-center gap-2 text-cyan-100 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400 rounded" href="mailto:nileshchavan0608@gmail.com" aria-label="Email"><Mail size={16}/> Email</a>
+            <a className="inline-flex items-center gap-2 text-cyan-100 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400 rounded" href="https://github.com/nilesh-0608" target="_blank" rel="noreferrer" aria-label="GitHub"><Github size={16}/> GitHub</a>
+            <a className="inline-flex items-center gap-2 text-cyan-100 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400 rounded" href="https://www.linkedin.com/in/nilesh-chavan-7a4920176/" target="_blank" rel="noreferrer" aria-label="LinkedIn"><Linkedin size={16}/> LinkedIn</a>
+            <a className="inline-flex items-center gap-2 text-cyan-100 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400 rounded" href="https://www.instagram.com/nil.0608/" target="_blank" rel="noreferrer" aria-label="Instagram"><Instagram size={16}/> Instagram</a>
+            <a className="inline-flex items-center gap-2 text-cyan-100 hover:text-white" href="tel:+918689864937" aria-label="Phone"><Phone size={16}/> +91 86898 64937</a>
+          </div>
+          <div className="mt-6 flex items-center justify-between">
+            <a href="/resume.pdf" className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-[#00E5FF] text-[#0E0B16] font-semibold uppercase tracking-wide shadow-[0_0_25px_#00E5FF] hover:shadow-[0_0_45px_#00E5FF] transition-shadow"><Download size={16} /> Download Resume (PDF)</a>
+          </div>
         </motion.div>
-        <motion.div variants={fadeUp} className="rounded-2xl p-6 bg-white/5 border border-white/10 shadow-xl">
-          <div className="flex items-center gap-3 text-cyan-200 mb-2"><Github size={18} /> <span>GitHub</span></div>
-          <a className="text-cyan-100 hover:text-white" href="https://github.com/nilesh-0608" target="_blank" rel="noreferrer">github.com/nilesh-0608</a>
-        </motion.div>
-        <motion.div variants={fadeUp} className="rounded-2xl p-6 bg-white/5 border border-white/10 shadow-xl">
-          <div className="flex items-center gap-3 text-cyan-200 mb-2"><Linkedin size={18} /> <span>LinkedIn</span></div>
-          <a className="text-cyan-100 hover:text-white" href="https://www.linkedin.com/in/nilesh-chavan-7a4920176/" target="_blank" rel="noreferrer">linkedin.com/in/nilesh-chavan-7a4920176</a>
-        </motion.div>
-        <motion.div variants={fadeUp} className="rounded-2xl p-6 bg-white/5 border border-white/10 shadow-xl">
-          <div className="flex items-center gap-3 text-cyan-200 mb-2"><Instagram size={18} /> <span>Instagram</span></div>
-          <a className="text-cyan-100 hover:text-white" href="https://www.instagram.com/nil.0608/" target="_blank" rel="noreferrer">instagram.com/nil.0608</a>
-        </motion.div>
-        <motion.div variants={fadeUp} className="rounded-2xl p-6 bg-white/5 border border-white/10 shadow-xl">
-          <div className="flex items-center gap-3 text-cyan-200 mb-2"><Phone size={18} /> <span>Mobile</span></div>
-          <a className="text-cyan-100 hover:text-white" href="tel:+918689864937">+91 86898 64937</a>
-        </motion.div>
-        <motion.div variants={fadeUp} className="rounded-2xl p-6 bg-white/5 border border-white/10 shadow-xl flex items-center justify-between">
-          <div className="text-cyan-100">Download Resume (PDF)</div>
-          <a href="/resume.pdf" className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-[#00E5FF] text-[#0E0B16] font-semibold uppercase tracking-wide shadow-[0_0_25px_#00E5FF] hover:shadow-[0_0_45px_#00E5FF] transition-shadow">
-            <Download size={16} /> Download
-          </a>
-        </motion.div>
+        <motion.form variants={fadeUp} className="rounded-2xl p-6 bg-white/5 border border-white/10 shadow-xl grid gap-4" action="mailto:nileshchavan0608@gmail.com" method="POST" encType="text/plain" aria-label="Contact form">
+          <div>
+            <label htmlFor="name" className="block text-xs uppercase tracking-widest text-cyan-200/80 mb-1">Name</label>
+            <input id="name" name="name" type="text" required className="w-full rounded-lg bg-black/20 border border-white/10 px-3 py-2 text-cyan-100 placeholder:text-cyan-200/40 focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400" placeholder="Your name" />
+          </div>
+          <div>
+            <label htmlFor="email" className="block text-xs uppercase tracking-widest text-cyan-200/80 mb-1">Email</label>
+            <input id="email" name="email" type="email" required className="w-full rounded-lg bg-black/20 border border-white/10 px-3 py-2 text-cyan-100 placeholder:text-cyan-200/40 focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400" placeholder="you@example.com" />
+          </div>
+          <div>
+            <label htmlFor="message" className="block text-xs uppercase tracking-widest text-cyan-200/80 mb-1">Message</label>
+            <textarea id="message" name="message" rows="4" className="w-full rounded-lg bg-black/20 border border-white/10 px-3 py-2 text-cyan-100 placeholder:text-cyan-200/40 focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400" placeholder="Your message"></textarea>
+          </div>
+          <div className="flex items-center gap-3">
+            <button type="submit" className="px-5 py-2 rounded-xl bg-[#00E5FF] text-[#0E0B16] font-semibold uppercase tracking-wide shadow-[0_0_25px_#00E5FF] hover:shadow-[0_0_45px_#00E5FF] transition-shadow">Send</button>
+            <span className="text-xs text-cyan-200/70">Form uses mailto by default. Configure endpoint for production.</span>
+          </div>
+        </motion.form>
       </motion.div>
     </Section>
   );
