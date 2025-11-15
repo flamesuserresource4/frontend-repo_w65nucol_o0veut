@@ -1,60 +1,40 @@
-// Central config for theme, behavior, and content mapping
-export const theme = {
-  colors: {
-    midnight: '#0E0B16',
-    nebula: '#301934',
-    cyan: '#00E5FF',
-    green: '#0B6E4F',
-    violet: '#9D4EDD'
-  },
-  typography: {
-    heading: 'Orbitron, Inter, system-ui, sans-serif',
-    body: 'Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif'
-  }
-};
+// Centralized configuration for brand, behavior, performance, and section→sky mapping
 
-export const behavior = {
-  // Navbar behavior
-  navbar: {
-    autoHide: true, // hide on scroll down, show on scroll up
-    showProgressBar: true,
-    offset: 72 // px offset for smooth scrolling anchors
-  },
-  // Scrolling experience
-  scroll: {
-    snap: false, // set to true to enable section snap-scrolling
-    threshold: 0.5, // IntersectionObserver threshold
-    rootMargin: '0px'
-  },
-  // Performance toggles
-  performance: {
-    particlesDesktop: 36,
-    particlesMobile: 14,
-    baseStars: 80,
-    reduceMotionParticles: 6 // when prefers-reduced-motion
-  }
-};
-
-// Map sections to universe sky themes
-export const sectionSkyMap = {
-  top: 'cosmos', // Hero
-  about: 'cosmos',
-  identity: 'cosmos',
-  skills: 'nebula',
-  projects: 'galaxy',
-  gaming: 'starcluster',
-  vision: 'aurora',
-  contact: 'deepspace'
-};
-
-// Copy strings centralization (easy to tweak)
-export const copy = {
-  hero: {
-    title: 'Nilesh Chavan',
-    subtitle: 'Full-Stack Developer • Debugging Expert • Aspiring Software Architect',
+export const siteConfig = {
+  brand: {
+    name: 'Nilesh Chavan',
     tagline: 'Cosmic • Gaming • Technology',
-    ctaPrimary: 'View My Work',
-    ctaSecondary: 'Download Resume (PDF)',
-    note: 'Prefer dark mode — toggle in header'
-  }
+  },
+  behavior: {
+    // Navbar controls
+    navbar: {
+      autoHide: true,
+      showProgressBar: true,
+      // Used by smooth anchor scrolling to offset for sticky header height
+      smoothScrollOffset: 80,
+    },
+    // Enable/disable CSS scroll snap for sections
+    snapScrolling: false,
+    // Performance tuning
+    performance: {
+      particlesDesktop: 36,
+      particlesMobile: 14,
+      baseStars: 80,
+      reduceOnMobile: true,
+    },
+  },
+  // Map page sections to background sky themes
+  // Valid sky ids: 'cosmos', 'nebula', 'galaxy', 'starCluster', 'aurora', 'deepSpace'
+  mapping: {
+    top: 'cosmos',
+    about: 'cosmos',
+    identity: 'cosmos',
+    skills: 'nebula',
+    projects: 'galaxy',
+    gaming: 'starCluster',
+    vision: 'aurora',
+    contact: 'deepSpace',
+  },
 };
+
+export default siteConfig;
