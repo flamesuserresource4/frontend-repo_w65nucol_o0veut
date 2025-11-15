@@ -1,4 +1,4 @@
-import { Code2, Orbit, Rocket, Gamepad2, Cpu, Server, Boxes, Bug, Sparkles, Atom, Brain, Download, Github, Linkedin, Mail } from 'lucide-react';
+import { Code2, Orbit, Rocket, Gamepad2, Cpu, Server, Boxes, Bug, Sparkles, Atom, Brain, Download, Github, Linkedin, Mail, Phone, Instagram } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 const Section = ({ id, title, children }) => (
@@ -14,9 +14,43 @@ export function About() {
   return (
     <Section id="about" title="About">
       <div className="grid md:grid-cols-2 gap-8 items-start">
-        <p className="text-cyan-100/90 leading-relaxed">
-          I am Nilesh Chavan, a full‑stack developer who loves where nature and technology meet. Gaming sharpens my reflexes; debugging is my superpower. I’m charting a path toward software architecture, designing resilient, scalable systems that feel elegant and alive.
-        </p>
+        <div className="space-y-6">
+          <p className="text-cyan-100/90 leading-relaxed">
+            I am Nilesh Chavan, a full‑stack developer who loves where nature and technology meet. Gaming sharpens my reflexes; debugging is my superpower. I’m charting a path toward software architecture, designing resilient, scalable systems that feel elegant and alive.
+          </p>
+          <div className="rounded-2xl p-6 bg-white/5 border border-white/10 shadow-xl">
+            <h3 className="text-cyan-200 font-semibold mb-3">Professional Experience</h3>
+            <ul className="space-y-4 text-cyan-100/85">
+              <li>
+                <div className="font-medium text-white">Senior Software Developer / Project Manager — Osian Infotech Pvt Ltd</div>
+                <div className="text-xs text-cyan-200/70">Sep 2019 – Present</div>
+                <ul className="list-disc ml-5 mt-2 space-y-1 text-sm">
+                  <li>Led React micro‑frontend modules and Node.js services for 4 concurrent projects.</li>
+                  <li>Built JavaScript SDK adopted by 3 teams; cut integration effort by 30%.</li>
+                  <li>Implemented Docker Bitbucket pipelines reducing deploy time from 2 days to 2 hours.</li>
+                  <li>Facilitated Jira‑led agile ceremonies achieving 95% sprint velocity.</li>
+                  <li>Designed Java REST APIs for legacy integration.</li>
+                </ul>
+              </li>
+              <li>
+                <div className="font-medium text-white">Jr. Software Developer — Tekno Point</div>
+                <div className="text-xs text-cyan-200/70">Oct 2017 – Dec 2018</div>
+                <ul className="list-disc ml-5 mt-2 space-y-1 text-sm">
+                  <li>Developed AEM components and templates for marketing sites.</li>
+                  <li>Created PDF generation workflow with iText.</li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          <div className="rounded-2xl p-6 bg-white/5 border border-white/10 shadow-xl">
+            <h3 className="text-cyan-200 font-semibold mb-3">Domain Experience</h3>
+            <div className="flex flex-wrap gap-2 text-sm">
+              {['IoT dashboards','Offline game analytics','MIS custom dashboards','Finance web apps','Banking modules','Insurance automation'].map((d) => (
+                <span key={d} className="px-3 py-1 rounded-full bg-white/10 border border-white/10 text-cyan-100/90">{d}</span>
+              ))}
+            </div>
+          </div>
+        </div>
         <div className="rounded-2xl p-6 bg-gradient-to-br from-[#301934]/50 to-[#0B6E4F]/30 border border-white/10 shadow-xl">
           <div className="flex items-center gap-3 text-cyan-200 mb-2"><Bug size={18} /><span className="uppercase tracking-widest text-xs">Strength</span></div>
           <p className="text-cyan-100/90">Deep debugging, performance tuning, and clean, composable architecture.</p>
@@ -89,12 +123,17 @@ export function Skills() {
 }
 
 export function Projects() {
-  const proj = (title, summary, stack, role) => (
+  const proj = (title, summary, stack, role, href) => (
     <div className="rounded-2xl p-6 bg-white/5 border border-white/10 hover:border-cyan-300/40 transition-colors shadow-xl">
       <h3 className="text-xl font-semibold text-white drop-shadow-[0_0_12px_rgba(0,229,255,0.25)]">{title}</h3>
       <p className="text-cyan-100/85 mt-2">{summary}</p>
       <div className="mt-4 text-cyan-200/90 text-sm">Stack: {stack}</div>
       <div className="mt-1 text-cyan-200/70 text-sm">Role: {role}</div>
+      {href && (
+        <a href={href} target="_blank" rel="noreferrer" className="mt-4 inline-flex items-center gap-2 text-[#00E5FF] hover:text-white">
+          <Rocket size={16}/> View Project
+        </a>
+      )}
     </div>
   );
   return (
@@ -108,15 +147,30 @@ export function Projects() {
         )}
         {proj(
           'Flutter Color Nebula – VS Code Extension',
-          'A lightweight extension that previews dynamic Flutter color palettes inline. Boosted theme iteration speed for designers and devs.',
+          'A lightweight extension that previews dynamic Flutter color palettes inline. 470k+ installs with a 4.5★ rating; accelerated theme iteration for designers and devs.',
           'TypeScript, VS Code API',
-          'Author — 12k+ downloads'
+          'Author',
+          'https://marketplace.visualstudio.com/items?itemName=circlecodesolution.ccs-flutter-color'
         )}
         {proj(
           'Gaia Sensors – Nature Tech Dashboard',
           'Real‑time sensors meet eco‑visualizations with alerts that feel like auroras.',
           'Next.js, WebSockets, Tailwind',
           'Full‑stack developer'
+        )}
+        {proj(
+          'Count Code Of Line – VS Code Extension',
+          'Counts lines of code across your workspace with quick insights. 1.5k+ installs.',
+          'TypeScript, VS Code API',
+          'Author',
+          'https://marketplace.visualstudio.com/items?itemName=BuzzyEvent.count-code-of-line'
+        )}
+        {proj(
+          'Redirect to WP Post – Chrome Extension',
+          'One‑click shortcut to navigate straight to WordPress post editing.',
+          'JavaScript, Chrome Extensions',
+          'Author',
+          'https://chromewebstore.google.com/detail/redirectto-wp-post/hdincebafepapncdmmhdlmcdbnokdlai'
         )}
       </div>
     </Section>
@@ -157,15 +211,19 @@ export function Contact() {
       <div className="grid md:grid-cols-2 gap-6">
         <div className="rounded-2xl p-6 bg-white/5 border border-white/10 shadow-xl">
           <div className="flex items-center gap-3 text-cyan-200 mb-2"><Mail size={18} /> <span>Email</span></div>
-          <a className="text-cyan-100 hover:text-white" href="mailto:nilesh@example.com">nilesh@example.com</a>
-        </div>
-        <div className="rounded-2xl p-6 bg-white/5 border border-white/10 shadow-xl">
-          <div className="flex items-center gap-3 text-cyan-200 mb-2"><Github size={18} /> <span>GitHub</span></div>
-          <a className="text-cyan-100 hover:text-white" href="https://github.com/" target="_blank" rel="noreferrer">github.com/nileshchavan</a>
+          <a className="text-cyan-100 hover:text-white" href="mailto:nileshchavan0608@gmail.com">nileshchavan0608@gmail.com</a>
         </div>
         <div className="rounded-2xl p-6 bg-white/5 border border-white/10 shadow-xl">
           <div className="flex items-center gap-3 text-cyan-200 mb-2"><Linkedin size={18} /> <span>LinkedIn</span></div>
-          <a className="text-cyan-100 hover:text-white" href="https://www.linkedin.com/" target="_blank" rel="noreferrer">linkedin.com/in/nileshchavan</a>
+          <a className="text-cyan-100 hover:text-white" href="https://www.linkedin.com/in/nilesh-chavan-7a4920176/" target="_blank" rel="noreferrer">linkedin.com/in/nilesh-chavan-7a4920176</a>
+        </div>
+        <div className="rounded-2xl p-6 bg-white/5 border border-white/10 shadow-xl">
+          <div className="flex items-center gap-3 text-cyan-200 mb-2"><Instagram size={18} /> <span>Instagram</span></div>
+          <a className="text-cyan-100 hover:text-white" href="https://www.instagram.com/nil.0608/" target="_blank" rel="noreferrer">instagram.com/nil.0608</a>
+        </div>
+        <div className="rounded-2xl p-6 bg-white/5 border border-white/10 shadow-xl">
+          <div className="flex items-center gap-3 text-cyan-200 mb-2"><Phone size={18} /> <span>Mobile</span></div>
+          <a className="text-cyan-100 hover:text-white" href="tel:+918689864937">+91 86898 64937</a>
         </div>
         <div className="rounded-2xl p-6 bg-white/5 border border-white/10 shadow-xl flex items-center justify-between">
           <div className="text-cyan-100">Download Resume (PDF)</div>

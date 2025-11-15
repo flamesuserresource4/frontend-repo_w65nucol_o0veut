@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { Menu, Sun, Moon, Github, Linkedin } from 'lucide-react';
+import { Menu, Sun, Moon, Github, Linkedin, Instagram } from 'lucide-react';
 
 const links = [
   { href: '#about', label: 'About' },
@@ -39,11 +39,15 @@ export default function Navbar() {
               NILESH CHAVAN
             </a>
             <div className="flex items-center gap-2">
+              {/* Keep GitHub icon for quick access if needed; link can be updated later */}
               <a href="https://github.com/" target="_blank" rel="noreferrer" className="p-2 rounded-lg hover:bg-white/10 text-cyan-300 hover:text-cyan-200 transition-colors">
                 <Github size={18} />
               </a>
-              <a href="https://www.linkedin.com/" target="_blank" rel="noreferrer" className="p-2 rounded-lg hover:bg-white/10 text-cyan-300 hover:text-cyan-200 transition-colors">
+              <a href="https://www.linkedin.com/in/nilesh-chavan-7a4920176/" target="_blank" rel="noreferrer" className="p-2 rounded-lg hover:bg-white/10 text-cyan-300 hover:text-cyan-200 transition-colors">
                 <Linkedin size={18} />
+              </a>
+              <a href="https://www.instagram.com/nil.0608/" target="_blank" rel="noreferrer" className="p-2 rounded-lg hover:bg-white/10 text-cyan-300 hover:text-cyan-200 transition-colors">
+                <Instagram size={18} />
               </a>
               <button onClick={toggleTheme} aria-label="Toggle theme" className="p-2 rounded-lg hover:bg-white/10 text-cyan-300 hover:text-cyan-200 transition-colors">
                 {darkMode ? <Sun size={18} /> : <Moon size={18} />}
