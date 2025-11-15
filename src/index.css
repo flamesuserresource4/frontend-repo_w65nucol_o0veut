@@ -5,42 +5,33 @@
 @layer base {
   :root {
     --font-sans: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    --font-geist: 'Geist', system-ui, sans-serif;
-    --font-geist-mono: 'Geist Mono', monospace;
-    --font-mona: 'Mona Sans', system-ui, sans-serif;
-    --font-ibm-plex: 'IBM Plex Sans', system-ui, sans-serif;
-    --font-manrope: 'Manrope', system-ui, sans-serif;
+    --font-orbitron: 'Orbitron', 'Inter', system-ui, sans-serif;
   }
 
   html {
     font-family: var(--font-sans);
     font-feature-settings: "rlig" 1, "calt" 1;
+    scroll-behavior: smooth;
   }
 
   body {
-    @apply antialiased;
+    @apply antialiased bg-[#0E0B16];
   }
 }
 
-/* Custom utility classes for shadcn/ui patterns */
-@layer utilities {
-  .animate-in {
-    animation-name: animateIn;
-    animation-duration: 350ms;
-    --tw-enter-opacity: initial;
-    --tw-enter-scale: initial;
-    --tw-enter-rotate: initial;
-    --tw-enter-translate-x: initial;
-    --tw-enter-translate-y: initial;
-  }
+/* Typography helpers */
+.font-orbitron { font-family: var(--font-orbitron); }
 
-  .animate-out {
-    animation-name: animateOut;
-    animation-duration: 350ms;
-    --tw-exit-opacity: initial;
-    --tw-exit-scale: initial;
-    --tw-exit-rotate: initial;
-    --tw-exit-translate-x: initial;
-    --tw-exit-translate-y: initial;
-  }
+/* Cosmic star field subtle effect */
+.stars { position: absolute; width: 200%; height: 200%; background: radial-gradient(ellipse at top, rgba(48,25,52,0.35), transparent 60%), radial-gradient(ellipse at bottom, rgba(11,110,79,0.2), transparent 60%), transparent; animation: pan 60s linear infinite; }
+
+@keyframes pan { 0% { transform: translate3d(0,0,0) } 100% { transform: translate3d(-25%, -25%, 0) } }
+
+/***** Utility accents *****/
+.btn-glow { box-shadow: 0 0 25px #00E5FF; }
+
+/* Light theme override */
+:root.light, .light {
+  --bg: #f8fafc;
+  --fg: #0E0B16;
 }

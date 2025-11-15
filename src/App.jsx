@@ -1,28 +1,37 @@
-import { useState } from 'react'
+import { useEffect } from 'react';
+import Navbar from './components/Navbar';
+import Hero from './components/Hero';
+import { About, CosmicIdentity, Skills, Projects, GamingMindset, Vision, Contact } from './components/Sections';
+import './index.css';
 
-function App() {
-  const [count, setCount] = useState(0)
+export default function App() {
+  useEffect(() => {
+    const link = document.querySelector("link[rel='icon']");
+    if (link) link.href = '/favicon.svg';
+  }, []);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-50 to-blue-50 flex items-center justify-center">
-      <div className="bg-white p-8 rounded-lg shadow-lg">
-        <h1 className="text-3xl font-bold text-gray-800 mb-4">
-          Vibe Coding Platform
-        </h1>
-        <p className="text-gray-600 mb-6">
-          Your AI-powered development environment
-        </p>
-        <div className="text-center">
-          <button
-            onClick={() => setCount(count + 1)}
-            className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded"
-          >
-            Count is {count}
-          </button>
-        </div>
-      </div>
-    </div>
-  )
-}
+    <div className="bg-[#0E0B16] text-white min-h-screen">
+      <Navbar />
+      <Hero />
 
-export default App
+      <main className="relative">
+        <div className="absolute inset-0 -z-0 pointer-events-none opacity-40" aria-hidden>
+          <div className="stars"></div>
+        </div>
+
+        <About />
+        <CosmicIdentity />
+        <Skills />
+        <Projects />
+        <GamingMindset />
+        <Vision />
+        <Contact />
+      </main>
+
+      <footer className="py-10 text-center text-xs text-cyan-200/70">
+        © {new Date().getFullYear()} Nilesh Chavan. Built with love for nature, gaming, and technology.
+      </footer>
+    </div>
+  );
+}
