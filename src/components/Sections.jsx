@@ -90,31 +90,33 @@ export function Skills() {
         <div className={card}>
           <h3 className="text-cyan-200 mb-3 font-semibold flex items-center gap-2"><Code2 size={18}/> Front‑end</h3>
           <div className="flex flex-wrap gap-2">
-            <span className={pill}>JavaScript</span>
-            <span className={pill}>React</span>
-            <span className={pill}>Next.js</span>
+            {['JavaScript','TypeScript','HTML5','CSS3','React','Redux','Next.js','Tailwind','Bootstrap','Material-UI','Webpack','Babel','SASS/SCSS','CSS Modules','Responsive Design','UI/UX','Accessibility','Cross-browser Testing'].map((s)=> (
+              <span key={s} className={pill}>{s}</span>
+            ))}
           </div>
         </div>
         <div className={card}>
-          <h3 className="text-cyan-200 mb-3 font-semibold flex items-center gap-2"><Server size={18}/> Back‑end</h3>
+          <h3 className="text-cyan-200 mb-3 font-semibold flex items-center gap-2"><Server size={18}/> Back‑end & APIs</h3>
           <div className="flex flex-wrap gap-2">
-            <span className={pill}>Node.js</span>
-            <span className={pill}>APIs</span>
-            <span className={pill}>Microservices</span>
+            {['Node.js','Express','REST APIs','Java','SQL','PHP','Python'].map((s)=> (
+              <span key={s} className={pill}>{s}</span>
+            ))}
           </div>
         </div>
         <div className={card}>
-          <h3 className="text-cyan-200 mb-3 font-semibold flex items-center gap-2"><Boxes size={18}/> Tools & Architecture</h3>
+          <h3 className="text-cyan-200 mb-3 font-semibold flex items-center gap-2"><Boxes size={18}/> Patterns</h3>
           <div className="flex flex-wrap gap-2">
-            <span className={pill}>Micro‑frontends</span>
-            <span className={pill}>Debugging</span>
-            <span className={pill}>System Design</span>
+            {['SPA','PWA','Micro-frontends'].map((s)=> (
+              <span key={s} className={pill}>{s}</span>
+            ))}
           </div>
         </div>
         <div className={card}>
-          <h3 className="text-cyan-200 mb-3 font-semibold flex items-center gap-2"><Brain size={18}/> Learning Path</h3>
+          <h3 className="text-cyan-200 mb-3 font-semibold flex items-center gap-2"><Cpu size={18}/> DevOps & Tools</h3>
           <div className="flex flex-wrap gap-2">
-            <span className={pill}>AI/ML</span>
+            {['Git','GitHub','Bitbucket','Docker','CI/CD','Jira','VS Code','Adobe AEM','Jest','Storybook','React Testing Library'].map((s)=> (
+              <span key={s} className={pill}>{s}</span>
+            ))}
           </div>
         </div>
       </div>
@@ -212,6 +214,10 @@ export function Contact() {
         <div className="rounded-2xl p-6 bg-white/5 border border-white/10 shadow-xl">
           <div className="flex items-center gap-3 text-cyan-200 mb-2"><Mail size={18} /> <span>Email</span></div>
           <a className="text-cyan-100 hover:text-white" href="mailto:nileshchavan0608@gmail.com">nileshchavan0608@gmail.com</a>
+        </div>
+        <div className="rounded-2xl p-6 bg-white/5 border border-white/10 shadow-xl">
+          <div className="flex items-center gap-3 text-cyan-200 mb-2"><Github size={18} /> <span>GitHub</span></div>
+          <a className="text-cyan-100 hover:text-white" href="https://github.com/nilesh-0608" target="_blank" rel="noreferrer">github.com/nilesh-0608</a>
         </div>
         <div className="rounded-2xl p-6 bg-white/5 border border-white/10 shadow-xl">
           <div className="flex items-center gap-3 text-cyan-200 mb-2"><Linkedin size={18} /> <span>LinkedIn</span></div>
